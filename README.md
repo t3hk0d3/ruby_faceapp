@@ -11,7 +11,7 @@ Faceapp Application is available on Google Play and Apple App Store:
 
 ## Usage
 
-### Commandline utility
+### Commandline
 
 ```bash
 faceapp [options] <filter> <input> [ouput]
@@ -42,7 +42,7 @@ $ faceapp female hitler.jpg adolfina.jpg
 $ faceapp female - < hitler.jpg > adolfina.jpg
 ```
 
-### Ruby library
+### Ruby
 
 ```ruby
 require 'faceapp'
