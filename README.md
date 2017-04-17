@@ -9,22 +9,6 @@ Faceapp Application is available on Google Play and Apple App Store:
 * https://play.google.com/store/apps/details?id=io.faceapp
 * https://itunes.apple.com/us/app/faceapp-free-neural-face-transformations/id1180884341
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'faceapp'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install faceapp
-
 ## Usage
 
 ### Commandline utility
@@ -55,6 +39,7 @@ faceapp [options] <filter> <input> [ouput]
 
 ```bash
 $ faceapp female hitler.jpg adolfina.jpg
+$ faceapp female - < hitler.jpg > adolfina.jpg
 ```
 
 ### Ruby library
@@ -91,6 +76,24 @@ end
 # => 100500 # Returns total bytes count
 
 ```
+
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'faceapp'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install faceapp
+
 
 ## License
 

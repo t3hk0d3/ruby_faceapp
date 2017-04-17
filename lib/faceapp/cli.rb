@@ -34,6 +34,9 @@ module Faceapp
       info 'Done.'
     rescue => e
       info "Error: #{e.message}"
+
+      debug { e.backtrace.join("\n") }
+
       exit(-1)
     ensure
       input.close if input.is_a?(File)
@@ -71,7 +74,7 @@ TEXT
     def parse_input(input)
       case input
       when '-'
-        STDIN
+        StringIO.new(STDIN.read)
       when nil
         print_usage
       else
@@ -124,12 +127,18 @@ TEXT
       end
     end
 
-    def debug(text)
-      STDERR.puts(text) if debug?
+    def debug(text = nil)
+      return unless debug?
+
+      STDERR.puts(text) if text
+      STDERR.puts(yield) if block_given?
     end
 
-    def info(text)
-      STDERR.puts(text) unless silent?
+    def info(text = nil)
+      return if silent?
+
+      STDERR.puts(text) if text
+      STDERR.puts(yield) if block_given?
     end
 
     def debug?
