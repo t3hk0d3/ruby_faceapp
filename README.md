@@ -4,6 +4,8 @@ Faceapp is neural-network face manipulation application for smartphones.
 
 This gem provides command-line utility and Ruby library to utilize Faceapp API without using smartphone application.
 
+![Example of female filter](dhh.jpg)
+
 Faceapp Application is available on Google Play and Apple App Store:
 
 * https://play.google.com/store/apps/details?id=io.faceapp
