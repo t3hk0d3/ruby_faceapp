@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://node-01.faceapp.io/api/v2.3/photos/foobar/filters/female?cropped=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - FaceApp/1.0.229 (Linux; Android 4.4)
+      X-FaceApp-DeviceID:
+      - latifwch
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      cache-control:
+      - no-cache="set-cookie"
+      content-language:
+      - en
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Mon, 17 Apr 2017 14:59:02 GMT
+      server:
+      - nginx/1.11.10
+      set-cookie:
+      - AWSELB=533FD5150E3C776E44A60B0BAC1608BCAA5097B20A657720487AA3EDC0509B45CDFD8D87A1FC3573BBEB7F4FA23D011429CE20A80DEFFE6EE707A21B80E438ED07E6B015EC;PATH=/;MAX-AGE=600
+      vary:
+      - Accept-Encoding, Accept-Language, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '118'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "<h1>Not Found</h1><p>The requested URL /api/v2.3/photos/foobar/filters/female
+        was not found on this server.</p>"
+    http_version: 
+  recorded_at: Mon, 17 Apr 2017 14:59:02 GMT
+recorded_with: VCR 3.0.1

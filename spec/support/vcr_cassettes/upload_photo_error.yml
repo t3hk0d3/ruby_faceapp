@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://node-01.faceapp.io/api/v2.3/photos
+    body:
+      encoding: UTF-8
+      string: "-------------RubyMultipartPost-e346d25caba8510ec09cd9fb068f0a7d\r\nContent-Disposition:
+        form-data; name=\"file\"; filename=\"local.path\"\r\nContent-Length: 6\r\nContent-Type:
+        image/jpeg\r\nContent-Transfer-Encoding: binary\r\n\r\nfoobar\r\n-------------RubyMultipartPost-e346d25caba8510ec09cd9fb068f0a7d--\r\n\r\n"
+    headers:
+      User-Agent:
+      - FaceApp/1.0.229 (Linux; Android 4.4)
+      X-FaceApp-DeviceID:
+      - latifwch
+      Content-Type:
+      - multipart/form-data; boundary=-----------RubyMultipartPost-e346d25caba8510ec09cd9fb068f0a7d
+      Content-Length:
+      - '292'
+  response:
+    status:
+      code: 400
+      message: 
+    headers:
+      allow:
+      - POST, OPTIONS
+      cache-control:
+      - no-cache="set-cookie"
+      content-language:
+      - en
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Apr 2017 14:58:30 GMT
+      server:
+      - nginx/1.11.10
+      set-cookie:
+      - AWSELB=533FD5150E3C776E44A60B0BAC1608BCAA5097B20A85E9A27F5819C7017541D76D5390DEBEDE80D62A928A5F89F9E5A234F56B8A4B1318B427681D9D44DF6C004C7A362C99;PATH=/;MAX-AGE=600
+      vary:
+      - Accept, Accept-Language, Cookie
+      x-faceapp-errorcode:
+      - photo_bad_type
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '72'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"err":{"code":"photo_bad_type","desc":"Photo payload is not an image"}}'
+    http_version: 
+  recorded_at: Mon, 17 Apr 2017 14:58:30 GMT
+recorded_with: VCR 3.0.1

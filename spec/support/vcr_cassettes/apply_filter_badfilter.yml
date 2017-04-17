@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://node-01.faceapp.io/api/v2.3/photos/20170417145829yocc/filters/foobar?cropped=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - FaceApp/1.0.229 (Linux; Android 4.4)
+      X-FaceApp-DeviceID:
+      - latifwch
+  response:
+    status:
+      code: 400
+      message: 
+    headers:
+      allow:
+      - GET, HEAD, OPTIONS
+      cache-control:
+      - no-cache="set-cookie"
+      content-language:
+      - en
+      date:
+      - Mon, 17 Apr 2017 14:59:04 GMT
+      server:
+      - nginx/1.11.10
+      set-cookie:
+      - AWSELB=533FD5150E3C776E44A60B0BAC1608BCAA5097B20A657720487AA3EDC0509B45CDFD8D87A1D4FD680BA549F0D21F2671F37FF2F410E7062DDA909765C1EEB5D9D594325616;PATH=/;MAX-AGE=600
+      vary:
+      - Accept-Language, Cookie
+      x-faceapp-errorcode:
+      - bad_filter_id
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '0'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 17 Apr 2017 14:59:04 GMT
+recorded_with: VCR 3.0.1
