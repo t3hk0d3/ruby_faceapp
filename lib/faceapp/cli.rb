@@ -45,7 +45,7 @@ module Faceapp
 
     def print_usage
       info <<TEXT
-faceapp [options] <filter> <input> [ouput]
+faceapp [options] <filter> <input> [output]
 
   <filter> - Faceapp filter name
     Possible values: #{Faceapp::KNOWN_FILTERS.join(', ')}
