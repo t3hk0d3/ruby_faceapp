@@ -59,7 +59,7 @@ module Faceapp
     end
 
     def apply_filter(photo_code, filter, io = nil, &block)
-      cropped = options.fetch(:cropped, true) ? 1 : 0
+      cropped = options.fetch(:cropped, true) ? "true" : "false"
 
       url = "/api/v2.3/photos/#{photo_code}/filters/#{filter}?cropped=#{cropped}"
 
